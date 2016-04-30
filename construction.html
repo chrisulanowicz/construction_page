@@ -137,6 +137,16 @@ div#score {
 		text-align: center;
 	}
     </style>
+    <style>
+        #drag{
+            height: 60px; width: 60px;
+            vertical-align: top;
+            margin-left: 20px;
+        }
+        #drop{
+            height: 200px;  width: 200px;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script>
@@ -183,9 +193,24 @@ div#score {
 
             })
         </script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $(function() {
+                $( "#drag" ).draggable();
+                $( "#drop" ).droppable({
+                    drop: function( event, ui ) {
+                        window.location.href = "http://www.codingdojo.com";
+                        }
+                });
+            });
+        });
+
+    </script>
 </head>
 <body>
     <div id="container">
+        <img id="drop" src="img/pig.jpg" alt="Pig">
+        <img id="drag" src="img/penny.jpeg" alt="Penny">
         <h1>Lucky Penny</h1>
         <h2>Unfortunately this site is still being developed, however, here's some things to do while you wait!</h2>
         <ol>
@@ -201,6 +226,7 @@ div#score {
 
    
     <div id="pacman"></div>
+<<<<<<< HEAD
  
 
 <div id="wrapper">
@@ -329,6 +355,8 @@ function shuffleArray(d) {
 	}
 		return d
 };
+=======
+>>>>>>> b2239fa3102b72e687d842bc90f3a47d1d672765
 
 </script>
 
